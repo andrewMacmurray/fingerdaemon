@@ -35,11 +35,11 @@ This sets up the SQLite database.
 
 A user has the following fields:
 
-+ `username`
-+ `shell` (e.g. /bin/zsh)
-+ `homeDirectory` (e.g. /Users/Andrew)
-+ `realName`
-+ `phone`
+`username`  
+`shell` (e.g. /bin/zsh)  
+`homeDirectory` (e.g. /Users/Andrew)  
+`realName`  
+`phone`  
 
 
 + create the database with: `stack exec dbuser -- init`
