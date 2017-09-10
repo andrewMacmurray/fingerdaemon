@@ -1,0 +1,43 @@
+name:                fingerdaemon
+version:             0.1.0.0
+synopsis:            fingerdaemon project from final chapter of haskell bool
+homepage:            https://github.com/andrewMacMurray/fingerdaemon#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Andrew MacMurray
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable dbuser
+  ghc-options:         -Wall
+  hs-source-dirs:      src
+  main-is:             Database.hs
+  default-language:    Haskell2010
+  other-modules:       User
+  build-depends:       base >= 4.7 && < 5
+                     , sqlite-simple
+                     , text
+                     , transformers
+                     , raw-strings-qq
+
+executable debug
+  ghc-options:         -Wall
+  hs-source-dirs:      src
+  main-is:             Debug.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , network
+
+executable fingerdaemon
+  hs-source-dirs:      src
+  main-is:             Fingerdaemon.hs
+  default-language:    Haskell2010
+  other-modules:       User
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , network
+                     , raw-strings-qq
+                     , sqlite-simple
+                     , text
